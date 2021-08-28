@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+</head>
+
+<body>
+
+    <header id="header" class="fixed w-full">
+        <nav class="flex bg-blue-400 items-center justify-between p-6 mx-auto h-1">
+            <div class="hidden md:block">
+                <img src="logo.svg" class="w-10">
+            </div>
+
+            <div  class="text-gray-900 float-left hidden md:block">
+                <a href="#logo_block" class="text-gray-900 mr-10">
+                    Main
+                </a>
+                <a href="#about_block" class="text-gray-900 mr-10">
+                    About
+                </a>
+                <a href="#help_block" class="text-gray-900 mr-10">
+                    Help
+                </a>
+                <a href="#contacts_block" class="text-gray-900 mr-10">
+                    Contacts
+                </a>
+
+                <button class="sign_up_btn text-gray-100 mr-10">
+                    Sign up
+                </button>
+                <button class="log_in_btn text-gray-100">
+                    Log in
+                </button>
+            </div>
+
+            <div class="block md:hidden">
+                <div class="dropdown">
+                    <button onclick="open_menu()" class="drop_btn flex p-2 border rounded">
+                        <span class="drop_btn">&#9776;</span>
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#logo_block" class="dropdown-element text-gray-900 bg-green-200 text-center">
+                            Main
+                        </a>
+                        <a href="#about_block" class="dropdown-element text-gray-900 bg-green-200 text-center">
+                            About
+                        </a>
+                        <a href="#help_block" class="dropdown-element text-gray-900 bg-green-200 text-center">
+                            Help
+                        </a>
+                        <a href="#contacts_block" class="dropdown-element text-gray-900 bg-green-200 text-center">
+                            Contacts
+                        </a>
+
+                        <button class="sign_up_btn dropdown-element text-gray-900 bg-green-300 text-center">
+                            Sign up
+                        </button>
+                        <button class="log_in_btn dropdown-element text-gray-900 bg-green-300 text-center">
+                            Log in
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="p-4 min-h-screen" id="logo_block">
+        <div class="content mt-32">
+            <h1 class="font-bold text-3xl m-auto text-center">BRAND</h1>
+            <img src="logo.svg" class="w-40 mt-4 m-auto">
+        </div>
+    </div>
+
+    <div class="p-4 h-auto bg-blue-400" id="about_block">
+        <div class="mt-2 md:w-3/4 w-4/5 m-auto">
+            <h3 class="font-bold text-3xl m-auto text-center">About</h3>
+            <div class="mt-4 mb-8 overflow-auto">
+                <div class="h-auto mt-2 pr-4 text-center md:block md:float-left md:w-2/5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolores ea facilis fugiat
+                    impedit incidunt iure iusto odit porro repellat rerum sequi voluptates! A error facilis nisi odio
+                    sapiente sint!
+                </div>
+
+                <p class="mt-4 pl-4 text-center md:float-right md:w-2/5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolores ea facilis fugiat
+                    impedit incidunt iure iusto odit porro repellat rerum sequi voluptates! A error facilis nisi odio
+                    sapiente sint!
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4 h-auto" id="help_block">
+        <div class="mt-8 md:w-3/5 w-4/5 m-auto">
+            <h3 class="font-bold text-3xl m-auto text-center">Help</h3>
+            <div class="mt-4 mb-4">
+                <p class="mt-2 text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
+                    dolores ea facilis fugiat impedit incidunt iure iusto odit porro repellat rerum sequi voluptates!
+                    A error facilis nisi odio sapiente sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dicta dolorem dolores fugiat incidunt inventore, iste maiores officia pariatur, possimus
+                    praesentium quis quisquam saepe tempore? At, maxime sed? Ea iste, ullam?
+                </p>
+
+                <p class="mt-2 text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolores ea facilis fugiat
+                    impedit incidunt iure iusto odit porro repellat rerum sequi voluptates! A error facilis nisi odio
+                    sapiente sint!
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4 bg-blue-400 h-auto" id="contacts_block">
+        <div class="mt-8 mb-4 m-auto">
+            <h3 class="font-bold text-3xl m-auto text-center">Contacts</h3>
+            <div class="mt-8">
+                <p class="mt-4 text-center">
+                    some_email@gmail.com
+                </p>
+                <p class="mt-4 text-center">
+                    +234-567-888-123-4
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer class="bg-blue-400 p-2 text-center">© 2021</footer>
+
+    <div id="sign_up" class="modal">
+        <div class="modal-content m-auto mt-20 w-4/5 md:w-2/5">
+            <button id="close_sign_up" class="float-right text-5xl"><span>&times;</span></button>
+            <br> <br>
+            <img src="logo.svg" class="w-48 mt-4 m-auto">
+            <div class="p-2 mt-2 lg:w-4/5 m-auto">
+                <input class="mt-2" required id="sign_up_email" type="text" name="email" placeholder="Enter your email ...">
+                <input class="mt-4" required id="sign_up_password" type="text" name="password" placeholder="Enter your password ...">
+                <input class="mt-4 mb-4" required id="sign_up_password_confirm" type="text" name="password_confirm" placeholder="Confirm your password ...">
+
+                <button type="submit" class="submit mt-4 mb-4">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="log_in" class="modal">
+        <div class="modal-content m-auto mt-20 w-4/5 md:w-2/5">
+            <button id="close_log_in" class="float-right text-5xl"><span>&times;</span></button>
+            <br> <br>
+            <img src="logo.svg" class="w-48 mt-4 m-auto">
+            <div class="p-2 mt-8 lg:w-4/5 m-auto text-center">
+                <input class="mt-2" required id="log_in_email" type="text" name="email" placeholder="Enter your email ...">
+                <input class="mt-4" required id="log_in_password" type="text" name="password" placeholder="Enter your password ...">
+
+                <button id="forgot_password_btn" class="mt-4 mb-4 ml-auto"><p class="text-gray-100">Forgot password?</p></button>
+
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="forgot_password" class="modal">
+        <div class="modal-content m-auto mt-20 w-4/5 md:w-2/5">
+            <button id="close_forgot_password" class="float-right text-5xl"><span>&times;</span></button>
+            <br> <br>
+            <img src="logo.svg" class="w-48 mt-4 m-auto">
+            <div class="p-2 mt-8 lg:w-4/5 m-auto">
+                <input class="mt-2 mb-8" required id="forgot_password_email" type="text" name="email" placeholder="Enter your email ...">
+
+                <button type="submit" class="submit mb-8">Send email</button>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="scripts.js"></script>
+
+</body>
+</html>
